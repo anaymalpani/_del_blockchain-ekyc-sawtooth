@@ -35,7 +35,7 @@ Note: You can check ${HOME} path by running: `echo ${HOME}`
 
 ## 2. Install Java and Maven
 	
-Run `java_installation.sh` file by running the following command at the available location (sawtooth/shell-scripts);
+Run `java_installation.sh` file by running the following command at the available location (sawtooth-ekyc-member/shell-scripts);
 ```	
 bash java_installation.sh
 ```
@@ -60,7 +60,7 @@ Apache Maven 3.0.4
 
 ## 3. MongoDB Installation
 	
-Run `mongo_installation.sh` file by running following command at the available location (sawtooth/shell-scripts)
+Run `mongo_installation.sh` file by running following command at the available location (sawtooth-ekyc-member/shell-scripts)
 ```	
 bash mongo_installation.sh
 ```	
@@ -79,7 +79,7 @@ sudo service mongod stop
 
 ## 4. NodeJS Setup
 
-Run `node_installation.sh` file by running following command at the available location (sawtooth/shell-scripts)
+Run `node_installation.sh` file by running following command at the available location (sawtooth-ekyc-member/shell-scripts)
 ```		
 bash node_installation.sh
 ```	   
@@ -95,14 +95,14 @@ Ubuntu 16.04 comes with both Python 2.7 and Python 3.5 by default. Check python 
 python2 -V
 python3 -V
 ```			
-Then run `python_setup.sh` file by running following command at the available location (sawtooth/shell-scripts)
+Then run `python_setup.sh` file by running following command at the available location (sawtooth-ekyc-member/shell-scripts)
 ```		
 bash python_setup.sh
 ```		
 	
 ## 6. Sawtooth Ubuntu Setup:
 	
-Run `sawtooth_ubuntu_installation.sh` file by running following command at the available location (sawtooth/shell-scripts)
+Run `sawtooth_ubuntu_installation.sh` file by running following command at the available location (sawtooth-ekyc-member/shell-scripts)
 ```		
 bash sawtooth_ubuntu_installation.sh
 ```	
@@ -141,13 +141,13 @@ sudo systemctl stop <service-name>
 			
 ## 7. Create 'sawtooth-java-tp.service':
 
-Please check the example `sawtooth-java-tp.service` in /sawtooth/javaprocessor/
+Please check the example `sawtooth-java-tp.service` in /sawtooth-ekyc-member/javaprocessor/
 	 
 In file;
 ```	
 [Service]
-WorkingDirectory = /home/pcuser/sawtooth/javaprocessor
-ExecStart=/home/pcuser/sawtooth/javaprocessor/build_java_processor.sh
+WorkingDirectory = /home/pcuser/blockchain-ekyc-sawtooth/sawtooth-ekyc-member/javaprocessor
+ExecStart=/home/pcuser/blockchain-ekyc-sawtooth/sawtooth-ekyc-member/javaprocessor/build_java_processor.sh
 ```	
 edit path accordingly to the path of `javaprocessor` and `build_java_processor.sh` as per your system.
 		
@@ -270,7 +270,7 @@ sawadm genesis config-genesis.batch config.batch poet.batch poet-settings.batch
 
 ***Please make sure all the services are up and running before starting on following steps.***
 ```		
-cd /sawtooth/jsclient/configs	
+cd /sawtooth-ekyc-member/jsclient/configs	
 sudo nano notification_config.js
 ```	
 Provide your ip address at IP_ADDRESS: "VM-IP-ADDRESS" eg., IP_ADDRESS : "198.168.0.1"
@@ -285,7 +285,7 @@ Now run:
 ```
 bash category.sh
 ```		
-In /sawtooth directory path;
+In /sawtooth-ekyc-member directory path;
 ```	
 cd /jsclient
 rm -rf node_modules
@@ -316,7 +316,7 @@ Go to your email and click on the link and use the login credentials emailed to 
 
 ***Please make sure all the services are up and running before starting on following steps.***
 ```	
-cd /sawtooth/jsclient/configs
+cd /sawtooth-ekyc-member/jsclient/configs
 sudo nano notification_config.js
 ```	
 Provide your ip address at IP_ADDRESS: "VM-IP-ADDRESS" eg., IP_ADDRESS : "198.168.0.1".
@@ -330,7 +330,7 @@ Now run: [***Note: Run only on one of the nodes***] (sawtooth/).
 ```		
 bash category.sh
 ```		
-In /sawtooth directory path;
+In /sawtooth-ekyc-member directory path;
 ```
 cd /jsclient
 rm -rf node_modules
@@ -370,7 +370,7 @@ Go to your email and click on the link and use the login credentials emailed to 
 Admin needs to approve members. Just start the application by running following commands:
 
 ```
-cd sawtooth/admin
+cd sawtooth-ekyc-admin
 ```	
 **NOTE: Please make sure it is pointing to the same mongo service as above** 
 
