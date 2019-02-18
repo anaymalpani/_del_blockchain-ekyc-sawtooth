@@ -8,11 +8,11 @@ For Ubuntu 16.04:
 
 	Run following git clone command at ${HOME} path, you can check ${HOME} path by running command : echo ${HOME}
 		
-		sudo git clone https://github.com/Primechain/sawtooth.git
+		sudo git clone https://github.com/Primechain/blockchain-ekyc-sawtooth.git
 
 2. Install Java and Maven:
 	
-	Run 'java_installation.sh' file by running following command at the available location (sawtooth/shell-scripts);
+	Run 'java_installation.sh' file by running following command at the available location (sawtooth-ekyc-member/shell-scripts);
 	
 		bash java_installation.sh
 	
@@ -37,7 +37,7 @@ For Ubuntu 16.04:
 		
 3. MongoDB Installation:
 	
-	Run 'mongo_installation.sh' file by running following command at the available location (sawtooth/shell-scripts);
+	Run 'mongo_installation.sh' file by running following command at the available location (sawtooth-ekyc-member/shell-scripts);
 	
 		bash mongo_installation.sh
 	
@@ -57,7 +57,7 @@ For Ubuntu 16.04:
 
 4. NodeJS Setup
 
-	Run 'node_installation.sh' file by running following command at the available location (sawtooth/shell-scripts);
+	Run 'node_installation.sh' file by running following command at the available location (sawtooth-ekyc-member/shell-scripts);
 	
 		bash node_installation.sh
 	   
@@ -74,16 +74,16 @@ For Ubuntu 16.04:
 		
 		python3 -V
 		
-	Then run 'python_setup.sh' file by running following command at the available location (sawtooth/shell-scripts);
+	Then run 'python_setup.sh' file by running following command at the available location (sawtooth-ekyc-member/shell-scripts);
 	
 		bash python_setup.sh
 		
 	
 6. Sawtooth Ubuntu Setup:
 	
-	Run 'sawtooth_ubuntu_installation.sh' file by running following command at the available location (sawtooth/shell-scripts);
+	Run 'sawtooth_ubuntu_installation.sh' file by running following command at the available location (sawtooth-ekyc-member/shell-scripts);
 	
-		bash sawtooth_ubuntu_installation.sh
+		bash sawtooth_ubuntu_setup.sh
 	
 	At any time after installation, you can view the installed sawtooth packages with the following command:
 		
@@ -123,13 +123,13 @@ For Ubuntu 16.04:
 			
 7. Create 'sawtooth-java-tp.service':
 
-	 1. Please check the example 'sawtooth-java-tp.service' in /sawtooth/javaprocessor/
+	 1. Please check the example 'sawtooth-java-tp.service' in /sawtooth-ekyc-member/
 	 
 	 2. In file;
 	 
 	 	[Service]
-		WorkingDirectory = /home/pcuser/sawtooth/javaprocessor
-		ExecStart=/home/pcuser/sawtooth/javaprocessor/build_java_processor.sh
+		WorkingDirectory = /home/pcuser/blockchain-ekyc-sawtooth/sawtooth-ekyc-member/javaprocessor
+		ExecStart=/home/pcuser/blockchain-ekyc-sawtooth/sawtooth-ekyc-member/javaprocessor/build_java_processor.sh
 
 		edit path accordingly to the path of 'javaprocessor' and 'build_java_processor.sh' as per your system.
 		
@@ -260,7 +260,7 @@ For Ubuntu 16.04:
 
 	**Please make sure all the services are up and running before starting on following steps.**
 		
-	1. cd /sawtooth/jsclient/configs
+	1. cd /sawtooth-ekyc-member/jsclient/configs
 	
 	2. sudo nano notification_config.js
 	
@@ -275,7 +275,7 @@ For Ubuntu 16.04:
 		
 		bash category.sh
 		
-	5. In /sawtooth directory path;
+	5. In /sawtooth-ekyc-member directory path;
 	
 		cd /jsclient
 		
@@ -310,7 +310,7 @@ For Ubuntu 16.04:
 
 	** Please make sure all the services are up and running before starting on following steps. **
 		
-	1. cd /sawtooth/jsclient/configs
+	1. cd /sawtooth-ekyc-member/jsclient/configs
 	
 	2. sudo nano notification_config.js
 	
@@ -321,11 +321,11 @@ For Ubuntu 16.04:
 	   
 	3. Save and exit nano.
 		
-	4. Now run: [Note: Run only on one of the nodes] (sawtooth/).
+	4. Now run: [Note: Run only on one of the nodes] (/sawtooth-ekyc-member/).
 		
 		 bash category.sh
 		
-	5. In /sawtooth directory path;
+	5. In /sawtooth-ekyc-member directory path;
 	
 		 cd /jsclient
 		
@@ -363,7 +363,7 @@ For Ubuntu 16.04:
 
 	Admin needs to approve members. Just start the application by running following commands:
 	
-	cd sawtooth/admin
+	Go to 'sawtooth-ekyc-admin'
 	
 	[ **Note: Please make sure it is pointing to the same mongo service as above ]
 	
