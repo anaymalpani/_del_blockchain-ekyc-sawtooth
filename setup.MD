@@ -102,9 +102,9 @@ bash python_setup.sh
 	
 ## 6. Sawtooth Ubuntu Setup:
 	
-Run `sawtooth_ubuntu_installation.sh` file by running following command at the available location (sawtooth-ekyc-member/shell-scripts)
+Run `sawtooth_ubuntu_setup.sh` file by running following command at the available location (sawtooth-ekyc-member/shell-scripts)
 ```		
-bash sawtooth_ubuntu_installation.sh
+bash sawtooth_ubuntu_setup.sh
 ```	
 At any time after installation, you can view the installed sawtooth packages with the following command:
 ```	
