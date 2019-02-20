@@ -93,13 +93,13 @@ def create_parser(prog_name):
 
 def _get_keyfile(userName):
     home = os.path.expanduser("~")
-    key_dir = os.path.join(home, "sawtooth", "sawtooth-ekyc-member", "jsclient", "keys")
+    key_dir = os.path.join(home, "blockchain-ekyc-sawtooth", "sawtooth-ekyc-member", "jsclient", "keys")
 
     return '{}/{}.priv'.format(key_dir, userName)
 
 def _get_pubkeyfile(userName):
     home = os.path.expanduser("~")
-    key_dir = os.path.join(home, "sawtooth", "sawtooth-ekyc-member", "jsclient", "keys")
+    key_dir = os.path.join(home, "blockchain-ekyc-sawtooth", "sawtooth-ekyc-member", "jsclient", "keys")
 
     return '{}/{}.pub'.format(key_dir, userName)
 
