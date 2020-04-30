@@ -4,7 +4,9 @@
   "description": "A frontend client for simplewallet application",
   "main": "app.js",
   "scripts": {
-    "start": "node moneyMember.js"
+    "start": "node moneyMember.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": "",
   "license": "Apache-2.0",
@@ -24,6 +26,8 @@
     "passport-local": "*",
     "randomstring": "*",
     "sawtooth-sdk": "^1.0.2",
-    "sendinblue-api": "*"
-  }
+    "sendinblue-api": "*",
+    "snyk": "^*"
+  },
+  "snyk": true
 }
